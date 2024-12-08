@@ -1,8 +1,8 @@
 import { Module, NestModule, MiddlewareConsumer } from '@nestjs/common';
 import { APP_INTERCEPTOR } from '@nestjs/core';
-import { HelloController } from './presentation/http/hello.controller';
+import { HelloController } from './presentation/controllers/hello.controller';
 import { GetHelloUseCase } from './application/use-cases/get-hello.use-case';
-import { PaginationInterceptor } from './infrastructure/interceptors/pagination.interceptor';
+import { PaginationInterceptor } from './presentation/middleware/pagination.interceptor';
 
 @Module({
   controllers: [HelloController],
